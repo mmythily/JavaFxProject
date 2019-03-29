@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.image.ImageView?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="DrawShapes_ListView.Controller_Shapes"
+          prefHeight="400.0" prefWidth="600.0" onMouseEntered="#changeMode">
+
+    <ListView fx:id="list_shapes" GridPane.rowIndex="0" GridPane.columnIndex="0" orientation="VERTICAL"
+              onMouseClicked="#drawShape">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Circle"/>
+                <String fx:value="Line"/>
+                <String fx:value="Point"/>
+                <String fx:value="Rectangle"/>
+            </FXCollections>
+        </items>
+    </ListView>
+    <HBox fx:id="hbox" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="200" prefHeight="200">
+
+    </HBox>
+</GridPane>

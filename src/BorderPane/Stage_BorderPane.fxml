@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="BorderPane.Controller_BorderPane"
+            >
+    <top>
+        <Button fx:id="top" text="top" onMouseClicked="#changeArrow" maxWidth="Infinity" maxHeight="50"/>
+    </top>
+    <bottom>
+        <Button fx:id="bottom" text="bottom" onMouseClicked="#changeArrow" maxWidth="Infinity" maxHeight="50"/>
+    </bottom>
+    <center>
+        <ImageView fx:id="arrowCanvas" fitHeight="175" fitWidth="175"/>
+    </center>
+    <left>
+        <Button fx:id="left" text="click me" onMouseClicked="#changeArrow" maxWidth="50" maxHeight="Infinity"/>
+    </left>
+    <right>
+        <Button fx:id="right" text="click me" onMouseClicked="#changeArrow" maxWidth="50" maxHeight="Infinity"/>
+    </right>
+</BorderPane>

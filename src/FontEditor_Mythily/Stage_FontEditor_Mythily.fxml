@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+          prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="FontEditor_Mythily.Controller_FontEditor_Mythily">
+
+    <ComboBox fx:id="fontName_Mythily" onAction="#changeFontName_Mythily" prefWidth="150.0"
+               visibleRowCount="3" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Heveltica" />
+                <String fx:value="Comic Sans MS" />
+                <String fx:value="Tahoma" />
+                <String fx:value="Trebuchet MS" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <ComboBox fx:id="fontStyle_Mythily" onAction="#changeFontStyle_Mythily" prefWidth="150.0"
+              visibleRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Regular" />
+                <String fx:value="Italic" />
+                <String fx:value="Bold" />
+                <String fx:value="Bold Italic" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <ComboBox fx:id="fontSize_Mythily" onAction="#changeFontSize_Mythily" prefWidth="150.0"  visibleRowCount="3"
+              GridPane.columnIndex="2" GridPane.rowIndex="0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="6" />
+                <String fx:value="10" />
+                <String fx:value="14" />
+                <String fx:value="18" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <ComboBox fx:id="fontColor_Mythily" onAction="#changeFontColor_Mythily"  prefWidth="149.0"
+              visibleRowCount="3" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Red" />
+                <String fx:value="Green" />
+                <String fx:value="Blue" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <ComboBox fx:id="underlineStyle_Mythily" onAction="#changeUnderline_Mythily" prefWidth="150.0"
+              visibleRowCount="3" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="none" />
+                <String fx:value="Underline" />
+                <String fx:value="Strikethrough" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+
+    <TextField fx:id="text_data_Mythily" alignment="CENTER" editable="false" prefHeight="50.0" prefWidth="400.0"
+               text="Preview Text" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+
+    <Button text="_Reset" fx:id="btn_reset_Mythily" onAction="#reset_Mythily" defaultButton="true"
+            prefHeight="50.0" prefWidth="225.0" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <Button text="_Cancel" fx:id="btn_cancel_Mythily" onAction="#close_Mythily" cancelButton="true"
+            prefHeight="50.0" prefWidth="225.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+
+</GridPane>

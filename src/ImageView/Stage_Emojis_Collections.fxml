@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ImageView.Controller_Emojis_Collections"
+          prefHeight="400.0" prefWidth="600.0">
+    <ListView fx:id="lst_faces" GridPane.rowIndex="0" GridPane.columnIndex="0"
+              orientation="VERTICAL" onMouseClicked="#showPic">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Neutral"/>
+                <String fx:value="Happy"/>
+                <String fx:value="Sad"/>
+
+            </FXCollections>
+        </items>
+    </ListView>
+
+    <ImageView fx:id="iv_Canvas" fitWidth="100" fitHeight="100" GridPane.rowIndex="0" GridPane.columnIndex="1">
+        <image>
+            <Image url="@images/Neutral.png"/>
+        </image>
+    </ImageView>
+</GridPane>

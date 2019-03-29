@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0"
+          xmlns="http://javafx.com/javafx/8.0.121"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="PersonaInfo_GridPane.Controller_PersInfo">
+
+    <Label alignment="CENTER" prefWidth="600" text="Enter Address" GridPane.columnIndex="0"
+           GridPane.columnSpan="4" GridPane.rowIndex="0" />
+
+    <Label prefWidth="200" text=" Address 1: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="txt_add1" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label prefWidth="200" text=" Address 2: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="txt_add2" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Label prefWidth="200" text=" City: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="txt_city" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label prefWidth="200" text=" Province: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="txt_province" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <Label prefWidth="200" text=" Postal Code: " GridPane.columnIndex="3" GridPane.rowIndex="4" />
+    <TextField fx:id="txt_pcode" text="" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+
+
+</GridPane>

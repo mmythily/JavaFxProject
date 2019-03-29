@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TipCalculator.TipCalcController"
+            prefHeight="300.0" prefWidth="400.0">
+
+    <Label text="Enter Bill Amount"/>
+    <TextField fx:id="txt_bill" text="0"/>
+
+    <Label text = "Enter Tip" />
+    <TextField fx:id="txt_tip_per" text="0"/>
+
+    <Button text = "_Calculate" mnemonicParsing="true" onAction="#calc" defaultButton="true"/>
+
+    <Label text="Bill Amount :" fx:id="lbl_bill"/>
+    <Label text="Tip Amount :" fx:id="lbl_tip_per"/>
+    <Label text="Total Amount :" fx:id="lbl_Total"/>
+
+
+
+
+
+</VBox>

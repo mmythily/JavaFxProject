@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="FileHandling.Controller_FileHandling"
+          prefHeight="400.0" prefWidth="600.0" onMouseEntered="#load">
+
+    <Label text="Name" GridPane.rowIndex="0"  GridPane.columnIndex="0" />
+    <TextField fx:id="txt_Name" GridPane.rowIndex="0"  GridPane.columnIndex="1" GridPane.columnSpan="3" prefWidth="250"/>
+
+    <Label text = "Street" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="txt_Stret" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="3" prefWidth="250"/>
+
+    <Label text = "City" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <TextField fx:id="txt_City" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="250" />
+
+    <Label text = "State"  GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <TextField fx:id="txt_State" GridPane.rowIndex="2" GridPane.columnIndex="3" prefWidth="250" />
+
+    <HBox GridPane.rowIndex="3" GridPane.columnSpan="4">
+        <Button fx:id="btn_add" text="_Add">
+            <HBox.margin>
+                <Insets top ="40" left = "20"/>
+            </HBox.margin>
+        </Button>
+        <Button fx:id="btn_update" text="_Update">
+            <HBox.margin>
+                <Insets top ="40" left = "20"/>
+            </HBox.margin>
+        </Button>
+        <Button fx:id="btn_next" text="_Next">
+            <HBox.margin>
+                <Insets top ="40" left = "20"/>
+            </HBox.margin>
+        </Button>
+        <Button fx:id="btn_previous" text="_Previous">
+            <HBox.margin>
+                <Insets top ="40" left = "20"/>
+            </HBox.margin>
+        </Button>
+        <Button fx:id="btn_first" text="_First">
+            <HBox.margin>
+                <Insets top ="40" left = "20"/>
+            </HBox.margin>
+        </Button>
+        <Button fx:id="btn_last" text="_Last">
+            <HBox.margin>
+                <Insets top ="40" left = "20"/>
+            </HBox.margin>
+        </Button>
+    </HBox>
+
+    <VBox GridPane.rowIndex="4" GridPane.columnSpan="4">
+        <Label text="Status" fx:id="lbl_status"/>
+    </VBox>
+
+</GridPane>

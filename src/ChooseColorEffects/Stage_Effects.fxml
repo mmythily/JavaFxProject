@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<FlowPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ChooseColorEffects.Controller_Effects"
+          prefHeight="400.0" prefWidth="600.0">
+
+    <fx:define>
+        <ToggleGroup fx:id = "grp_Colors"/>
+        <ToggleGroup  fx:id = "font_Sizes"/>
+    </fx:define>
+
+        <Label text="Select a color:" prefWidth="400.0" prefHeight="10.0"/>
+
+        <RadioButton fx:id="optRed" text="Red" prefWidth="400.0"
+                     toggleGroup="$grp_Colors" onMouseClicked="#changeColor">
+            <FlowPane.margin>
+                <Insets top = "10" left="10" right = "20" bottom="20"/>
+            </FlowPane.margin>
+        </RadioButton>
+
+        <RadioButton fx:id="optGreen" text="Green" prefWidth="400.0"
+                     toggleGroup="$grp_Colors" onMouseClicked="#changeColor">
+            <FlowPane.margin>
+                <Insets top = "10" left="10" right = "20" bottom="20"/>
+            </FlowPane.margin>
+        </RadioButton>
+
+        <RadioButton fx:id="optBlue" text="Blue" prefWidth="400.0"
+                     toggleGroup="$grp_Colors" onMouseClicked="#changeColor">
+            <FlowPane.margin>
+                <Insets top = "10" left="10" right = "20" bottom="20"/>
+            </FlowPane.margin>
+        </RadioButton>
+
+
+    <Label text="Select a size:" prefWidth="400.0" prefHeight="10.0"/>
+    <RadioButton fx:id="opt4" text="4" prefWidth="400.0"
+                 toggleGroup="$font_Sizes" onMouseClicked="#changeSize">
+        <FlowPane.margin>
+            <Insets top = "10" left="10" right = "20" bottom="20"/>
+        </FlowPane.margin>
+    </RadioButton>
+
+    <RadioButton fx:id="opt16" text="16" prefWidth="400.0"
+                 toggleGroup="$font_Sizes" onMouseClicked="#changeSize">
+        <FlowPane.margin>
+            <Insets top = "10" left="10" right = "20" bottom="20"/>
+        </FlowPane.margin>
+    </RadioButton>
+
+    <RadioButton fx:id="opt24" text="24" prefWidth="400.0"
+                 toggleGroup="$font_Sizes" onMouseClicked="#changeSize">
+        <FlowPane.margin>
+            <Insets top = "10" left="10" right = "20" bottom="20"/>
+        </FlowPane.margin>
+    </RadioButton>
+
+
+    <TextField fx:id ="text_data" text = "SHOWING EFFECTS" editable="false" prefWidth="400.0" prefHeight="50.0"/>
+
+
+</FlowPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.text.Font?>
+<VBox fx:controller="sample.Controller"
+      xmlns:fx="http://javafx.com/fxml" onMouseMoved ="#drawLine" fx:id="lay_vb">
+        <Button text="Hello World!" fx:id="btn_t1" onMouseEntered="#mouseMove" layoutX="50" layoutY="50" mnemonicParsing="true">
+        <font>
+            <Font name ="Arial" size ="20"/>
+        </font>
+        </Button>
+
+
+<Label text = "Give me your carrots" fx:id = "lbl_t2" onMouseEntered="#mouseMove" layoutX="80" layoutY="80">
+<font>
+    <Font name ="Arial" size ="24"/>
+</font>
+</Label>
+        </VBox>

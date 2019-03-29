@@ -1,0 +1,42 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" onMouseMoved ="#drawLine" fx:id="lay_ap"> <!--layout AnchorPane
+    AnchorPane is Parent, and Label is Child -->
+    <Button text="Hello World!" fx:id="btn_t1" onMouseEntered="#mouseMove" layoutX="50" layoutY="50" mnemonicParsing="true">
+        <!-- mnemonicParsing is for shortcuts -->
+        <font>
+            <Font name ="Arial" size ="20"/>
+        </font>
+    </Button>
+
+    <!--
+    <Label text = "Hello Folks" fx:id = "lbl_t1"  onMouseEntered="#mouseMove" onMouseClicked="#mouseClick" layoutX="50" layoutY="50">
+        <font>
+            <Font name ="Arial" size ="24"/>
+        </font>
+    </Label>
+    -->
+
+    <Label text = "Give me your carrots" fx:id = "lbl_t2" onMouseEntered="#mouseMove" layoutX="80" layoutY="80">
+        <font>
+            <Font name ="Arial" size ="24"/>
+        </font>
+    </Label>
+</AnchorPane>
+
+
+
+<HBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" fx:id="lay_hb"
+      onMouseMoved="#drawCircle" spacing="5">
+    <padding>
+
+    </padding>
+</HBox>
