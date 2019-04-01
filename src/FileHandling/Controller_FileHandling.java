@@ -1,5 +1,7 @@
 //Random Access File
-
+/**
+ * March 29 2019
+ */
 package FileHandling;
 
 import javafx.scene.control.Button;
@@ -39,8 +41,10 @@ public class Controller_FileHandling {
             }
         }); //instead of onAction="#save"
         btn_update.setOnAction(event -> {
-
-            update();
+            try{
+                update();
+            }
+            catch (IOException e1){}
         });
         btn_next.setOnAction(event -> {
             try{
@@ -83,7 +87,31 @@ public class Controller_FileHandling {
         clear();
         lbl_status.setText("Status:Data added successfully");
     }
-    public void update(){
+    public void update() throws IOException{
+        ArrayList<String> list = new ArrayList<>();
+        raf.seek(0);
+        String data = "";
+        while ((data = raf.readLine())!=null){
+            list.add(data);
+        }
+        if (count<=0)
+            count = 0;
+        else{
+            count--;
+        }
+        list.remove(count);
+        name = txt_Name.getText();
+        city = txt_City.getText();
+        street = txt_Street.getText();
+        state = txt_Street.getText();
+        String dat = name+", "+street+", "+city+", "+state;
+        list.add(count,dat);
+        raf.setLength(0);
+        for(String d:list) {
+            raf.seek(raf.length());
+            raf.writeBytes(dat);
+            raf.writeBytes(System.lineSeparator());
+        }
 
     }
     public void next() throws IOException{

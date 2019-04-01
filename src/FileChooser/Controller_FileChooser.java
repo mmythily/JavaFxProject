@@ -2,6 +2,7 @@ package FileChooser;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 
@@ -15,7 +16,7 @@ public class Controller_FileChooser {
     Scanner reader;
     PrintWriter writer;
     FileChooser filepicker = new FileChooser();
-    TextField txt_data;
+    TextArea txt_data;
     public void show(ActionEvent e) throws FileNotFoundException, IOException{
         Button b = (Button)e.getSource();
         switch (b.getText()){
@@ -24,7 +25,8 @@ public class Controller_FileChooser {
                 if(file!=null){
                     reader = new Scanner (new File(file.toURI()));//uniform resource indicator
                     while(reader.hasNextLine()){
-                        txt_data.setText(txt_data.getText()+reader.nextLine());
+                        txt_data.appendText(reader.nextLine());
+                        //txt_data.setText(txt_data.getText()+reader.nextLine());
                     }
                 }
                 break;
@@ -34,10 +36,11 @@ public class Controller_FileChooser {
                     if(file != null){
                         writer = new PrintWriter(new File (file.toURI()));
                         String data = txt_data.getText();
-                        writer.write(data);
+                        System.out.println(data);
+                        writer.println(data);
+                        writer.close();
                     }
-
-
+                    break;
         }
     }
 }
