@@ -17,6 +17,7 @@ public class Controller_FileChooser {
     PrintWriter writer;
     FileChooser filepicker = new FileChooser();
     TextArea txt_data;
+
     public void show(ActionEvent e) throws FileNotFoundException, IOException{
         Button b = (Button)e.getSource();
         switch (b.getText()){
@@ -26,6 +27,7 @@ public class Controller_FileChooser {
                     reader = new Scanner (new File(file.toURI()));//uniform resource indicator
                     while(reader.hasNextLine()){
                         txt_data.appendText(reader.nextLine());
+
                         //txt_data.setText(txt_data.getText()+reader.nextLine());
                     }
                 }
